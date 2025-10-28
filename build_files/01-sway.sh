@@ -21,7 +21,11 @@ dnf install -y sddm
 dnf install -y \
     initial-setup \
     initial-setup-gui \
-    initial-setup-gui-wayland-sway
+    initial-setup-gui-wayland-generic \
+    weston \
+    xorg-x11-server-Xwayland \
+    kbd
+curl -o /usr/libexec/initial-setup/run-gui-backend https://raw.githubusercontent.com/marmarek/initial-setup/refs/heads/change-vt/scripts/run-gui-backend.guiweston
 systemctl set-default graphical.target
 systemctl enable initial-setup.service
 systemctl enable sddm
