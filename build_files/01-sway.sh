@@ -24,5 +24,5 @@ dnf install -y \
     initial-setup-gui-wayland-generic
 systemctl set-default graphical.target
 systemctl enable sddm
-systemctl enable initial-setup-graphical.service
+systemctl enable initial-setup.service
 firstboot --enable --reconfig
