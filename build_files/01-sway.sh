@@ -10,7 +10,6 @@ dnf install -y \
     SwayNotificationCenter \
     SwayNotificationCenter-zsh-completion \
     sway-audio-idle-inhibit \
-    initial-setup-gui-wayland-sway \
     waybar \
     swayidle \
     sway-systemd
@@ -20,6 +19,11 @@ dnf install -y \
     qt6ct \
     ptyxis
 dnf install -y sddm
+dnf install \
+    initial-setup \
+    initial-setup-gui \
+    initial-setup-gui-wayland-generic
 systemctl set-default graphical.target
 systemctl enable sddm
 systemctl enable initial-setup-graphical.service
+firstboot --enable --reconfig
