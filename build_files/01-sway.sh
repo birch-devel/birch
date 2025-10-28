@@ -11,15 +11,14 @@ dnf install -y \
     SwayNotificationCenter-zsh-completion \
     sway-audio-idle-inhibit \
     waybar \
-    swayidle \
-    sway-systemd
+    swayidle
 dnf install -y \
     dolphin \
     spectacle \
     qt6ct \
     ptyxis
 dnf install -y sddm
-dnf install \
+dnf install -y \
     initial-setup \
     initial-setup-gui \
     initial-setup-gui-wayland-generic
