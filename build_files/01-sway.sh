@@ -21,7 +21,7 @@ dnf install -y sddm
 dnf install -y \
     initial-setup \
     initial-setup-gui \
-    initial-setup-gui-wayland-generic
+    initial-setup-gui-wayland-sway
 systemctl set-default graphical.target
-systemctl enable sddm
 systemctl enable initial-setup.service
+systemctl enable sddm
