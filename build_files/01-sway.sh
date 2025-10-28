@@ -24,8 +24,10 @@ dnf install -y \
     initial-setup-gui-wayland-generic \
     weston \
     xorg-x11-server-Xwayland \
-    kbd
+    kbd \
+    seatd
 curl -o /usr/libexec/initial-setup/run-gui-backend https://raw.githubusercontent.com/marmarek/initial-setup/refs/heads/change-vt/scripts/run-gui-backend.guiweston
+systemctl enable seatd
 systemctl set-default graphical.target
 systemctl enable initial-setup.service
 systemctl enable sddm
