@@ -6,7 +6,7 @@ dnf install -y --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/ter
 dnf install -y \
     swayfx \
     swaylock-effects \
-    swaylock-effects-bash-completion \
+    swaylock-effects-zsh-completion \
     SwayNotificationCenter \
     SwayNotificationCenter-zsh-completion \
     sway-audio-idle-inhibit \
@@ -25,4 +25,3 @@ dnf install -y \
 systemctl set-default graphical.target
 systemctl enable sddm
 systemctl enable initial-setup.service
-firstboot --enable --reconfig
