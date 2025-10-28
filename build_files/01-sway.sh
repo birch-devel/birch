@@ -22,3 +22,4 @@ dnf install -y \
 dnf install -y sddm
 systemctl set-default graphical.target
 systemctl enable sddm
+systemctl enable initial-setup-graphical.service
