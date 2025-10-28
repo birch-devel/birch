@@ -25,7 +25,11 @@ dnf install -y \
     weston \
     xorg-x11-server-Xwayland \
     kbd \
-    seatd
+    seatd \
+    gtk3 \
+    python3 \
+    anaconda-gui \
+    generic-logos \
 curl -o /usr/libexec/initial-setup/run-gui-backend https://raw.githubusercontent.com/marmarek/initial-setup/refs/heads/change-vt/scripts/run-gui-backend.guiweston
 systemctl enable seatd
 systemctl set-default graphical.target
