@@ -9,6 +9,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     dnf install -y basesystem coreutils util-linux shadow-utils nano && \
     /ctx/00-base.sh && \
-    /ctx/01-sway.sh
+    /ctx/01-sway.sh && \
+    /ctx/02-taidan.sh
     
 RUN bootc container lint
