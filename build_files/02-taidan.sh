@@ -2,8 +2,10 @@
 
 set -ouex pipefail
 
-dnf5 -y copr enable ublue-os/staging
+cp /ctx/taidan.repo /etc/yum.repos.d/taidan.repo
+dnf5 update -y
 dnf5 -y install taidan
-dnf5 -y copr disable ublue-os/staging
+rm /etc/yum.repos.d/taidan.repo
+dnf5 update -y
 systemctl preset-all
 hostnamectl hostname birch
